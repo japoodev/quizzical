@@ -9,21 +9,21 @@ const Question = ({ question, next }: QuestionProps) => {
   );
   const options = unshuffled_options.sort(() => Math.random() - 0.5);
   return (
-    <div>
+    <div className="h-40 w-96 flex flex-col justify-between">
       <p>{question.question}</p>
-      <ul>
-        {options.map((option: any, index: number) => (
-          <div onChange={next}>
-            <input
-              type="radio"
-              key={index}
-              name={question.question}
-              value={option}
-            />
-            <label>{option}</label>
-          </div>
-        ))}
-      </ul>
+        <div>
+            {options.map((option: any, index: number) => (
+              <div onChange={next}>
+                <input
+                  type="radio"
+                  key={index}
+                  name={question.question}
+                  value={option}
+                />
+                <label>{option}</label>
+              </div>
+            ))}
+        </div>
     </div>
   );
 };

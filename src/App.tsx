@@ -16,7 +16,7 @@ const App = () => {
     setStart(false);
   };
   return (
-    <div className="container">
+    <div className="h-screen flex flex-col justify-center items-center">
       {start ? (
         <Game restart={restart} quizDeets={quizDeets} />
       ) : (

@@ -6,11 +6,11 @@ type ScoreProps = {
 
 const ScoreScreen = ({ score, amount, restart }: ScoreProps) => {
   return (
-    <div>
+    <div className="flex flex-col">
       <h3>
         You scored {score} out of {amount}
       </h3>
-      <button onClick={restart}>Restart</button>
+      <button className="bg-green-500 text-white rounded-xl mt-4  p-2" onClick={restart}>Restart</button>
     </div>
   );
 };
