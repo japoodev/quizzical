@@ -25,7 +25,7 @@ const Start = ({ play, setQuizDeets }: ButtonProps) => {
     }));
   };
   return (
-    <div className="flex gap-6 flex-col min-w-[400px] p-5 text-xl">
+    <div className="flex flex-col gap-5 p-6">
       <div>
         <label className="mr-2" htmlFor="amount">Number of Questions</label>
         <select
@@ -128,7 +128,7 @@ const Start = ({ play, setQuizDeets }: ButtonProps) => {
         </select>
       </div>
       <button className="bg-secondary text-primary rounded-xl mt-4 text-xl p-2" onClick={play}>
-        Let's Play!
+        Start Quiz
       </button>
     </div>
   );
