@@ -1,3 +1,4 @@
+import Layout from "./components/Layout";
 import Start from "./components/Start";
 import Game from "./components/Game";
 import { useState } from "react";
@@ -16,13 +17,13 @@ const App = () => {
     setStart(false);
   };
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <Layout>
       {start ? (
         <Game restart={restart} quizDeets={quizDeets} />
       ) : (
         <Start setQuizDeets={setQuizDeets} play={startGame} />
       )}
-    </div>
+    </Layout>
   );
 };
 

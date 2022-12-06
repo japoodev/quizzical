@@ -25,11 +25,24 @@ const Start = ({ play, setQuizDeets }: ButtonProps) => {
     }));
   };
   return (
-    <div className="flex gap-3 flex-col min-w-[400px] p-3">
-      <div className="flex justify-between">
+    <div className="flex gap-6 flex-col min-w-[400px] p-5 text-xl">
+      <div>
         <label className="mr-2" htmlFor="amount">Number of Questions</label>
         <select
-          className="text-right border-2 rounded"
+          className="form-select appearance-none
+          block
+          w-full
+          px-3
+          py-1.5
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding bg-no-repeat
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
           name="amount"
           id="amount"
           onChange={setAmount}
@@ -40,11 +53,24 @@ const Start = ({ play, setQuizDeets }: ButtonProps) => {
           <option value="20">20</option>
         </select>
       </div>
-      <div className="flex justify-between">
+      <div>
         <label className="mr-2" htmlFor="category">Category</label>
         <select
         placeholder="Select Category"
-          className="text-right rounded border-2"
+          className="form-select appearance-none
+          block
+          w-full
+          px-3
+          py-1.5
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding bg-no-repeat
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
           name="category"
           id="category"
           onChange={setCategory}
@@ -75,10 +101,23 @@ const Start = ({ play, setQuizDeets }: ButtonProps) => {
           <option value="32">Entertainment: Cartoon & Animations</option>
         </select>
       </div>
-      <div className="flex justify-between">
+      <div>
         <label htmlFor="difficulty">Difficulty</label>
         <select
-          className="text-right border-2 rounded"
+          className="form-select appearance-none
+          block
+          w-full
+          px-3
+          py-1.5
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding bg-no-repeat
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
           name="difficulty"
           id="difficulty"
           onChange={setDifficulty}
@@ -88,7 +127,7 @@ const Start = ({ play, setQuizDeets }: ButtonProps) => {
           <option value="hard">Hard</option>
         </select>
       </div>
-      <button className="bg-green-500 text-white rounded-xl mt-4 text-xl p-2" onClick={play}>
+      <button className="bg-secondary text-primary rounded-xl mt-4 text-xl p-2" onClick={play}>
         Let's Play!
       </button>
     </div>

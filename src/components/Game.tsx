@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Question from "./Question";
 import ScoreScreen from "./ScoreScreen";
+import Loading from './Loading'
 
 type GameProps = {
   quizDeets: any;
@@ -48,9 +49,9 @@ const Game = ({ quizDeets, restart }: GameProps) => {
   }, []);
 
   return (
-    <div>
+    <>
       {loading ? (
-        <p>Loading...</p>
+        <Loading />
       ) : quiz.length > 0 ? (
         <Question key={quiz[0].question} question={quiz[0]} next={handleNext} />
       ) : (
@@ -60,7 +61,7 @@ const Game = ({ quizDeets, restart }: GameProps) => {
           restart={restart}
         />
       )}
-    </div>
+    </>
   );
 };
 
