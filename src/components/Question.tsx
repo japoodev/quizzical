@@ -22,7 +22,7 @@ const Question = ({ question, next }: QuestionProps) => {
       return { __html: option };
     }
   return (
-    <div className="flex md:w-[60vw] md:align-middle flex-col p-4 h-[40vh] justify-between">
+    <div className="md:w-[60vw] md:align-middle md:min-h-[30vh] min-h-[50vh] flex flex-col justify-between">
       <p
         className="px-5 text-xl"
         dangerouslySetInnerHTML={createQuestion()}

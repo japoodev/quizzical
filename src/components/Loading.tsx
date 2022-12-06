@@ -1,7 +1,7 @@
 const Loading = () => {
   const options = ['A', 'B', 'C', 'D']
   return (
-    <div className="flex md:w-[60vw] md:align-middle flex-col p-4 h-[40vh] justify-between">
+    <div className="md:w-[60vw] md:align-middle md:min-h-[30vh] min-h-[50vh] flex flex-col justify-between">
       <p
         className="h-16 text-xl bg-gray-300 animate-pulse rounded-md"
       ></p>
